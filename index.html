@@ -105,7 +105,7 @@
   <div id="container"></div>
 
   <div id="info">
-    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Data acquired from <a href="http://sedac.ciesin.columbia.edu/gpw/">SEDAC</a>
+    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by Ritika Srivastava <span class="bull">&bull;</span> Data acquired from <a href="https://ourworldindata.org/life-expectancy/">OWID</a>
   </div>
 
   <div id="currentInfo">
@@ -166,7 +166,7 @@
       
       
       xhr = new XMLHttpRequest();
-      xhr.open('GET', '/globe/poverty.json', true);
+      xhr.open('GET', '/globe/life.json', true);
       xhr.onreadystatechange = function(e) {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
@@ -178,10 +178,6 @@
             globe.createPoints();
             settime(globe,0)();
             globe.animate();
-            globe.backgroundImage = "/Star-field-5.JPG";
-            globe.background = "/Star-field-5.JPG";
-            document.body.style.backgroundImage = "/Star-field-5.JPG"; // remove loading
-            document.body.style.backgroundcolor = 'blue';
           }
         }
       };
